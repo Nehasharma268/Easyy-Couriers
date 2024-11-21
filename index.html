@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Easyy Couriers - Home</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  <script src="{{url_for('static',filename='script.js')}}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyy Couriers Logo">
+        <h1>Easyy Couriers</h1>  
+    </div>    
+    <nav>
+        
+    <ul class="navbar-right">
+        <li><a href="{{url_for('index')}}">Home</a></li>
+        <li><a href="{{url_for('booking')}}">Book a Parcel</a></li>
+        <li><a href="{{url_for('status_update')}}">Update Delivery Status</a></li>
+        <li><a href="{{url_for('feedback')}}">Provide Feedback</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="welcome-section">
+    <div class="text-container">
+      <h2>Welcome to Easyy Couriers</h2>
+      <p>Easyy Couriers is your reliable courier service provider, offering fast and secure delivery of your packages and documents.</p>
+      <p>With our easy-to-use online platform, you can book a parcel, track its delivery status, and provide feedback, all from the comfort of your home or office.</p>
+    </div>
+    <div class="image-container">
+      <img src="{{url_for('static',filename='images/features.png')}}" alt="Easyy Couriers Image">
+    </div>
+  </section>
+  
+  <section class="features-section">
+    <h3>Send from your location, to anywhere in the country</h3>
+    <p>Break the traditional courier cycle with Delhivery Direct’s doorstep pickup</p>
+  
+    <div class="features-container">
+      <div class="feature">
+        <img src="{{url_for('static',filename='images/payment.png')}}" alt="Payment Icon">
+        <h4>Multiple payment options</h4>
+      </div>
+      <div class="feature">
+        <img src="{{url_for('static',filename='images/track.png')}}" alt="Tracking Icon">
+        <h4>Real-time tracking</h4>
+      </div>
+      <div class="feature">
+        <img src="{{url_for('static',filename='images/pick.png')}}" alt="Pickup Icon">
+        <h4>Hassle-free pick-up</h4>
+      </div>
+      <div class="feature">
+        <img src="{{url_for('static',filename='images/deliver.png')}}" alt="Delivery Icon">
+        <h4>Faster, safer delivery</h4>
+      </div>
+    </div>
+  </section>
+  
+
+  <div class="options">
+    <div class="option-block">
+      <div class="option">
+        <h3>Book a Parcel</h3>
+        <img src="{{url_for('static',filename='images/book.png')}}" alt="Book Parcel Image">
+        <p>Need to send a package? Use our simple parcel booking system to provide the necessary details and schedule a pickup.</p>
+        <a href="{{url_for('booking')}}" class="button">Book Now</a>
+      </div>
+      <div class="option">
+        <h3>Update Delivery Status</h3>
+        <img src="{{url_for('static',filename='images/status.png')}}" alt="Update Status Image">
+        <p>If you have booked a parcel with us, you can easily update its delivery status to keep track of its progress.</p>
+        <a href="{{url_for('status_update')}}" class="button">Update Now</a>
+      </div>
+      <div class="option">
+        <h3>Provide Feedback</h3>
+        <img src="{{url_for('static',filename='images/feedback.png')}}" alt="Feedback Image">
+        <p>We value your feedback! Share your experience with us and help us improve our services.</p>
+        <a href="{{url_for('feedback')}}" class="button">Provide Feedback</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <footer>
+    <p>&copy; 2023 Easyy Couriers. All rights reserved.</p>
+  </footer>
+</body>
+</html>

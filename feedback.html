@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Easyy Couriers - Provide Feedback</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  <script src="{{url_for('static',filename='script.js')}}"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyy Couriers Logo">
+    <h1>Easyy Couriers</h1>  
+</div>    
+<nav>
+    
+  <ul class="navbar-right">
+    <li><a href="{{url_for('index')}}">Home</a></li>
+    <li><a href="{{url_for('booking')}}">Book a Parcel</a></li>
+    <li><a href="{{url_for('status_update')}}">Update Delivery Status</a></li>
+    <li><a href="{{url_for('feedback')}}">Provide Feedback</a></li>
+    <li><a href="{{url_for('login')}}">Login</a></li>
+  </ul>
+</nav>
+</header>
+
+  <section class="content">
+    <h2>Provide Feedback</h2>
+    <form action="/feedback" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <br>
+      <br>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <br>
+      <br>
+
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" name="feedback" required></textarea>
+
+      <br>
+      <br>
+      <br>
+
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Easyy Couriers. All rights reserved.</p>
+  </footer>
+</body>
+</html>

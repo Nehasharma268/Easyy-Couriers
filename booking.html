@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parcel Booking</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  <script src="{{url_for('static',filename='script.js')}}"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="{{url_for('static',filename='images/logo.png')}}" alt="Easyy Couriers Logo">
+    <h1>Easyy Couriers</h1>  
+</div>    
+<nav>
+    
+<ul class="navbar-right">
+    <li><a href="{{url_for('index')}}">Home</a></li>
+    <li><a href="{{url_for('booking')}}">Book a Parcel</a></li>
+    <li><a href="{{url_for('status_update')}}">Update Delivery Status</a></li>
+    <li><a href="{{url_for('feedback')}}">Provide Feedback</a></li>
+    <li><a href="{{url_for('login')}}">Login</a></li>
+  </ul>
+</nav>
+</header>
+
+  <section class="booking-form">
+    <h2>Book a Parcel</h2>
+    <form action="{{url_for('booking')}}" method="POST">
+      <label for="sender-name">Sender Name:</label>
+      <input type="text" id="sender-name" name="sender_name" required>
+
+      <label for="sender-address">Sender Address:</label>
+      <textarea id="sender-address" name="sender_address" required></textarea>
+
+      <label for="receiver-name">Receiver Name:</label>
+      <input type="text" id="receiver-name" name="receiver_name" required>
+
+      <label for="receiver-address">Receiver Address:</label>
+      <textarea id="receiver-address" name="receiver_address" required></textarea>
+
+      <label for="parcel-weight">Parcel Weight (in kg):</label>
+      <input type="number" id="parcel-weight" name="parcel_weight" required>
+
+      <input type="submit" value="Submit" class="button">
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Easyy Couriers. All rights reserved.</p>
+  </footer>
+</body>
+</html>
